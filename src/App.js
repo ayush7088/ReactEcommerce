@@ -1,9 +1,10 @@
 import { Counter } from "./features/counter/Counter";
 import "./App.css";
-import ProductList from "./features/product-list/ProductList";
+import ProductList from "./features/product-list/components/ProductList";
 import Home from "./pages/Home";
 import LoginPage from "./pages/LoginPage";
 import SignupPage from "./pages/SignupPage";
+
 
 
 import {
@@ -15,6 +16,9 @@ import {
 import Login from "./features/auth/components/Login";
 import { Cart } from "./features/cart/Cart";
 import CartPage from "./pages/CartPage";
+import Checkout from "./pages/Checkout";
+import ProductDetails from "./features/product-list/components/ProductDetails";
+import ProductDetailPage from "./pages/ProductDetailPage";
 
 const router = createBrowserRouter([
   {
@@ -29,9 +33,17 @@ const router = createBrowserRouter([
     path: "/signup",
     element: <SignupPage></SignupPage>,
   },
-  { // only for testing , then page will be added
+  { 
     path: "/cart",
     element: <CartPage></CartPage>,
+  },
+  { 
+    path: "/checkout",
+    element: <Checkout></Checkout>,
+  },
+  { 
+    path: "/product-detail",
+    element: <ProductDetailPage></ProductDetailPage>,
   },
 ]);
 

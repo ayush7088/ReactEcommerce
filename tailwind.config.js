@@ -4,8 +4,11 @@ module.exports = {
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
-    extend: {},
-  },
-  plugins: [require('@tailwindcss/aspect-ratio'),require('@tailwindcss/forms')],
-}
-
+    extend: {
+      gridTemplateRows: {
+        '[auto,auto,1fr]': 'auto auto 1fr',
+      },
+    },
+  }, // Remove the extra comma here
+  plugins: [require('@tailwindcss/aspect-ratio'), require('@tailwindcss/forms')],
+};
